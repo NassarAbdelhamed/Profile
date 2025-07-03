@@ -99,3 +99,10 @@ body {
     font-size: 22px;
     font-weight: 400;
 }
+
+@media screen and (max-width:1060px) {
+    body {
+        background-color: blue;
+    }
+    
+}
