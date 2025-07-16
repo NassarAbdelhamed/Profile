@@ -1,11 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Nassar Abdelhamed</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* Reuse your index styles here, simplified to essentials for demo */
+
+    :root {
+      --primary: #d65c10;
+      --primary-dark: #b34a0d;
+      --secondary: #2c5282;
+      --dark: #222;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5e0e0 0%, #e2c4c4 100%);
+      margin: 0;
+      color: #333;
+    }
+
+    /* Header */
+    .header {
+      background-color: var(--primary);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo-text {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .logo-text span:first-child {
+      color: var(--white);
+    }
+
+    .logo-text span:last-child {
+      color: var(--secondary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+    }
+
+    .nav-links a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-dark);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+    }
+
+    /* Projects Section */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .page-title {
+      text-align: center;
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      color: var(--secondary);
+    }
+
+    .project-link {
+      color: var(--primary);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+     .footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+  </style>
 </head>
 <body>
-    projects
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">
+        <div class="logo-text">
+          <span>Port</span><span>folio</span>
+        </div>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="education.html">Education</a>
+        <a href="../index.html">Home</a>
+        <a href="contact.html">Contact me</a>
+      </div>
+      <button class="mobile-menu-btn" id="menuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <main class="container">
+    <h1 class="page-title">Projects</h1>
+
+    <div class="project-card">
+      <h2 class="project-title">EmployeesList (Full-Stack)</h2>
+      <a href="https://github.com/NassarAbdelhamed/EmployeesList" class="project-link" target="_blank">View on GitHub</a>
+      <p>CRUD app for managing employees using Express.js and MongoDB.</p>
+    </div>
+
+    <div class="project-card">
+      <h2 class="project-title">Exams Website</h2>
+      <a href="https://github.com/NassarAbdelhamed/Exams" class="project-link" target="_blank">View on GitHub</a>
+      <p>Online exam system with auth, timing, and result handling using Express and Oracle DB.</p>
+    </div>
+
+    <div class="project-card">
+      <h2 class="project-title">Personal Portfolio</h2>
+      <a href="https://nassarabdelhamed.github.io/Profile/" class="project-link" target="_blank">View Live</a>
+      <p>Responsive portfolio site with HTML, CSS, and JavaScript.</p>
+    </div>
+  </main>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://github.com/NassarAbdelhamed" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/nassar-abdelhamed-b35b2b242/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/nassarabdelhameed/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:nassarabdelhamed556@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="copyright">© 2025 Nassar Abdelhamed. All rights reserved.</p>
+    </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = menuBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+  </script>
 </body>
 </html>
+
